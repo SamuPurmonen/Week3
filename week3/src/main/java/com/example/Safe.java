@@ -9,11 +9,13 @@ public class Safe {
     private String pinCode;
     private ArrayList<String> safeFolder = new ArrayList<String>();
     
+    public Safe(String pinCode) {
+        this.pinCode = pinCode;
+    }
+
     public Safe() {
         this.pinCode = "0000";
     }
-
-
 
 
     public String GetPinCode(){
