@@ -29,7 +29,7 @@ public class App {
 
                 switch(i) {
                     case 1:
-                    System.out.println("Anna PIN-koodi: ");
+                    System.out.println("Anna uusi PIN-koodi: ");
                     String newPincode = sc.nextLine();
                     newSafe.SetPinCode(newPincode);
                     break;
