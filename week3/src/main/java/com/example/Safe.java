@@ -32,16 +32,22 @@ public class Safe {
     }
 
 
-    public void getFolder(){
-        for (String safeFolder : safeFolder){
-            System.out.println(safeFolder);
-        }
-    }
-    
-    public ArrayList<String> getlist(){
+    public ArrayList<String> getFolder(String koodi){
+        if (koodi.equals(this.pinCode)){
 
-        return this.safeFolder;
-    }
+            for (String safeFolder : safeFolder){
+                System.out.println(safeFolder);
+            
+            }
+            return this.safeFolder;
+        }
+        else{
+            System.out.println("Väärä PIN-koodi!");
+            return null;
+        }
+        }
+    
+    
     
         
     

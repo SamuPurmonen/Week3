@@ -43,13 +43,7 @@ public class App {
                     case 3:
                     System.out.println("Anna PIN-koodi: ");
                     String koodi = sc.nextLine();
-                    if (koodi.equals(newSafe.getPinCode()) ){
-                        newSafe.getFolder();
-                    }
-                    else {
-                        System.out.println("Väärä PIN-koodi!");
-                    }
-                    
+                    newSafe.getFolder(koodi);
                     break;
 
                     case 0:
