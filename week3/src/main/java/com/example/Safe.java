@@ -31,12 +31,20 @@ public class Safe {
         this.safeFolder.add(data);
     }
 
+
     public void getFolder(){
         for (String safeFolder : safeFolder){
             System.out.println(safeFolder);
         }
-        
     }
+    
+    public ArrayList<String> getlist(){
+
+        return this.safeFolder;
+    }
+    
+        
+    
 
     
     
