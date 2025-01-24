@@ -31,28 +31,24 @@ public class App {
                     case 1:
                     System.out.println("Anna uusi PIN-koodi: ");
                     String newPincode = sc.nextLine();
-                    newSafe.SetPinCode(newPincode);
+                    newSafe.setPinCode(newPincode);
                     break;
 
                     case 2:
                     System.out.println("Anna kansioon lisättävä tieto: ");
                     String addedData = sc.nextLine();
-                    newSafe.AddNumber(addedData);
+                    newSafe.addNumber(addedData);
                     break;
 
                     case 3:
                     System.out.println("Anna PIN-koodi: ");
                     String koodi = sc.nextLine();
-                    if (koodi.equals(newSafe.GetPinCode()) ){
-                        newSafe.GetFolder();
+                    if (koodi.equals(newSafe.getPinCode()) ){
+                        newSafe.getFolder();
                     }
                     else {
                         System.out.println("Väärä PIN-koodi!");
                     }
-                    
-                    break;
-
-                    case 4:
                     
                     break;
 

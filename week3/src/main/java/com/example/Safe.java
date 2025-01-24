@@ -18,20 +18,20 @@ public class Safe {
     }
 
 
-    public String GetPinCode(){
+    public String getPinCode(){
         return this.pinCode;
     }
 
-    public void SetPinCode(String newPin){
+    public void setPinCode(String newPin){
         this.pinCode = newPin;
     }
     
 
-    public void AddNumber(String data){
+    public void addNumber(String data){
         this.safeFolder.add(data);
     }
 
-    public void GetFolder(){
+    public void getFolder(){
         for (String safeFolder : safeFolder){
             System.out.println(safeFolder);
         }
