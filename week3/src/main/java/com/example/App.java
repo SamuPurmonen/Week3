@@ -7,27 +7,18 @@ public class App {
 
         Scanner sc = new Scanner(System.in); // luodaan scanneri
 
-        System.out.print("Anna auton merkki: ");
-        String make = sc.nextLine(); //scanneri luo muuttujan make joka ottaa sisään seuraavan inputin
-
-        System.out.print("Anna auton malli: ");
-        String model = sc.nextLine();
+         
         
-        int speed = 0;
 
-        Car newCar = null;
-        newCar = new Car(make, model, speed); // ennen looppisa
+        //  Safe newSafe = null;
+        //  newSafe = new Safe(pinCode, safeFolder);   tämä sama onnistuu alla olevalla
 
-
+        Safe newSafe = new Safe();
 
 
         boolean exit = false;
         while(!exit){
-            System.out.println("1) Näytä auton tila\r\n" + //
-                                "2) Muokkaa auton merkkiä ja mallia\r\n" + //
-                                "3) Kiihdytä autoa\r\n" + //
-                                "4) Hidasta autoa\r\n" + //
-                                "0) Lopeta ohjelma");
+            System.out.println("1) Aseta PIN-koodi" + '\n' + "2) Lisää tietoja kansioon"+'\n'+ "3) Listaa tiedot kansiosta"+ '\n'+ "0) Lopeta ohjelma");
 
             if(sc.hasNext()){
                 int i = 0;
@@ -38,20 +29,31 @@ public class App {
 
                 switch(i) {
                     case 1:
-                    
-                    newCar.Status();
+                    System.out.println("Anna PIN-koodi: ");
+                    String newPincode = sc.nextLine();
+                    newSafe.SetPinCode(newPincode);
                     break;
 
                     case 2:
-                    newCar.changeMakeAndModel(sc);
+                    System.out.println("Anna kansioon lisättävä tieto: ");
+                    String addedData = sc.nextLine();
+                    newSafe.AddNumber(addedData);
                     break;
 
                     case 3:
-                    newCar.accelerate(sc);
+                    System.out.println("Anna PIN-koodi: ");
+                    String koodi = sc.nextLine();
+                    if (koodi.equals(newSafe.GetPinCode()) ){
+                        newSafe.GetFolder();
+                    }
+                    else {
+                        System.out.println("Väärä PIN-koodi!");
+                    }
+                    
                     break;
 
                     case 4:
-                    newCar.decelerate(sc);
+                    
                     break;
 
                     case 0:
